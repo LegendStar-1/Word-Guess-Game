@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Guess • Multiplayer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="brand">
+      <h1>Word Guess</h1>
+      <div class="pill">3 minutes • 10 words • 1 point per correct guess</div>
+    </div>
+    <div class="grid">
+      <main class="card hero">
+        <div id="app"></div>
+        <div id="meetingDock">
+          <div id="meeting" class="meeting hidden">
+            <div class="section-title"><strong>Meeting</strong><span id="meetingStatus" class="small">Connecting…</span>
+            </div>
+            <div id="videoGrid" class="video-grid"></div>
+            <div class="meeting-tools">
+              <button class="secondary" id="muteBtn">Mute mic</button>
+              <button class="secondary" id="cameraBtn">Turn camera off</button>
+              <button class="secondary" id="meetingRestartBtn">Join meeting</button>
+            </div>
+            <div class="meeting-note" id="meetingNote">For camera and microphone access on a phone, the game normally
+              needs HTTPS. Chat works over your current LAN address.</div>
+          </div>
+        </div>
+        <div class="room-tools">
+        </div>
+      </main>
+      <aside class="card players">
+        <div id="scoreList" class="score-list"></div>
+        <div id="notice" class="notice"></div>
+        <div id="roundHistory" class="round-history"></div>
+        <div id="chat" class="chat hidden">
+          <div class="section-title"><strong>Room chat</strong><span class="small">Everyone can see it</span></div>
+          <div id="chatLog" class="chat-log"></div>
+          <div class="chat-row"><input id="chatInput" maxlength="500" placeholder="Type a message…"><button class="primary" id="chatBtn">Send</button></div>
+        </div>
+        <div id="share" class="share" hidden>
+          <div class="share-label">Invite by URL</div>
+          <div class="share-row"><input id="shareUrl" readonly><button class="secondary" id="copyBtn">Copy</button></div>
+        </div>
+        <div id="recovery" class="share" hidden>
+          <details>
+            <summary>Rejoin from another device</summary>
+            <p class="recovery-note">Keep this private code somewhere safe. Enter it on the room join screen to restore your player identity and points.</p>
+            <div class="share-row"><input id="recoveryCode" readonly aria-label="Private player recovery code"><button class="secondary" id="copyRecoveryBtn">Copy code</button></div>
+          </details>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>
