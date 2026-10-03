@@ -1,0 +1,27 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Environment and sensitive variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Operating System / Editor specific files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Optional build outputs (if you use a bundler in the future)
+dist/
+build/
